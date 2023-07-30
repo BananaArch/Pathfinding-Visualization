@@ -1,6 +1,7 @@
 /* https://www.youtube.com/watch?v=F83dpbn5QXA&t=201s&ab_channel=ShivamGoswami */
 :root {
-    --offwhite: #F8F0E3;
+    --babypowder: #FBFEFB
+    --hexagon-background: black;
 }
 
 * {
@@ -9,23 +10,17 @@
 }
 
 body {
-    background: palegoldenrod;
+    background: var(--babypowder);
     overflow: hidden;
 }
 
 .hex-container {
     position: fixed;
-    /* Position the container relative to the viewport */
     top: 0;
-    /* Align the container to the top of the viewport */
     left: 0;
-    /* Align the container to the left of the viewport */
     width: 100%;
-    /* Take up the entire width of the viewport */
     height: 100%;
-    /* Take up the entire height of the viewport */
     overflow: auto;
-    /* Add scrollbars if content overflows the container */
 }
 
 .hex-grid {
@@ -33,12 +28,11 @@ body {
 }
 
 .hex-grid .hexagon {
-    width: 52px;
+    width: 49px;
     height: 30px;
-    background: var(--offwhite);
-    /* lemon chiffon */
     position: absolute;
     border-radius: 2px;
+    background: var(--hexagon-background);
 }
 
 .hex-grid .hexagon::before,
@@ -47,8 +41,8 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: var(--offwhite);
     border-radius: 3px;
+    background: var(--hexagon-background);
 }
 
 .hex-grid .hexagon::before {

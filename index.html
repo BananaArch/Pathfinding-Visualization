@@ -6,11 +6,49 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="hex-container" id="hex-container">
+    <div class="hex-container" id="hexContainer">
         <div class="hex-grid" id="hexGrid">
         </div>
     </div>
+    <div class="button-container">
+        <div class="floating-button" onclick="computeAStar()">
+            Compute A*
+        </div>
+    </div>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100vh;
+        }
+        
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            padding: 12px 24px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            border-radius: 30px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); 
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+        
+        
+    </style>
+
+    <script src="js/pathfinding/node.js"></script>
+    <script src="js/pathfinding/binaryHeap.js"></script>
+    <script src="js/pathfinding/astar.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/eventManager.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/astar.js"></script>
+    
 </body>
 </html>
